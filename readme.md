@@ -1,53 +1,36 @@
-# Blockspace Algorand Hackathon Project 🚀
+# Blockspace Algorand Hackathon
 
-Ce projet a été développé dans un but d'apprentissage lors du **Blockspace Algorand Hackathon**. Il explore l'intégration entre une interface moderne en Svelte et la blockchain Algorand via un backend Python Flask.
+An educational prototype exploring the integration of a Svelte frontend with the Algorand blockchain via a Python Flask backend. Created during the Blockspace Algorand Hackathon to demonstrate ASA (Algorand Standard Assets) creation.
 
-⚠️ **Note :** Ce projet est un prototype expérimental créé pour apprendre et tester des concepts. Il n'est pas destiné à la production.
+⚠️ **Note**: This is a learning project/prototype, not intended for production use.
 
-## 📝 À propos
+## ⚡ Features
 
-L'objectif principal était de créer une application permettant d'interagir avec la blockchain Algorand, notamment pour la création d'actifs (ASA - Algorand Standard Assets). Nous avons voulu comprendre comment lier un front-end réactif à des opérations blockchain complexes.
+- **Algorand Interaction**: Connect to TestNet and manage wallets.
+- **Asset Creation**: Mint NFTs and Tokens (ASAs) directly from the UI.
+- **Fullstack Architecture**: Decoupled Svelte frontend and Flask backend.
 
-### Fonctionnalités explorées :
--   Connexion à la blockchain Algorand (TestNet).
--   Création d'actifs (NFTs/Tokens) depuis une interface web.
--   Gestion de portefeuille (Wallet).
--   Architecture Fullstack (Front Svelte + Back Flask).
+## 🛠 Tech Stack
 
-## 🛠 Technologies utilisées
+- **Frontend**: [Svelte](https://svelte.dev/), [Tailwind CSS](https://tailwindcss.com/)
+- **Backend**: [Python Flask](https://flask.palletsprojects.com/)
+- **Blockchain**: `py-algorand-sdk`
 
--   **Frontend** : [Svelte](https://svelte.dev/) + [Tailwind CSS](https://tailwindcss.com/)
--   **Backend** : [Python Flask](https://flask.palletsprojects.com/)
--   **Blockchain** : [Algorand](https://algorand.com/) (via `py-algorand-sdk`)
+## 🚀 Quick Start
 
-## ⚙️ Installation et Lancement
+The project includes a helper script to bootstrap both services.
 
-### Prérequis
--   Node.js & npm
--   Python 3.9+
--   Un compte/wallet Algorand TestNet (pour les clés API/Mnemonic)
+1. **Setup Environment**
+   Ensure you have Node.js and Python 3.9+ installed.
+   Configure your `.env` in the `back/` directory with your Algorand TestNet credentials.
 
-### Configuration
-1.  Clonez ce dépôt.
-2.  Assurez-vous d'avoir les variables d'environnement nécessaires dans un fichier `.env` dans le dossier `back/` (voir `app.py` pour les variables requises : `PASSPHRASE`, `ACCOUNT_ADDRESS`, etc.).
+2. **Run**
+   ```bash
+   chmod +x start.sh
+   ./start.sh
+   ```
+   This script installs frontend dependencies and launches both the Vite server and Flask API.
 
-### Lancement rapide
-Le projet inclut un script `start.sh` pour faciliter le démarrage :
+## 🤝 Contributing
 
-```bash
-chmod +x start.sh
-./start.sh
-```
-
-Ce script va :
-1.  Installer les dépendances frontend et lancer le serveur de développement Svelte.
-2.  Lancer le serveur backend Flask.
-
-*Note : Le backend a été adapté pour fonctionner avec `algosdk` standard afin d'assurer une meilleure compatibilité.*
-
-## 🤝 Contribution
-
-Comme il s'agit d'un projet d'apprentissage, n'hésitez pas à forker le projet pour tester vos propres idées ou à ouvrir des issues si vous avez des suggestions d'amélioration !
-
----
-*Fait avec ❤️ et curiosité pour l'écosystème Algorand.*
+Feel free to fork this repository for your own experiments with Algorand!
